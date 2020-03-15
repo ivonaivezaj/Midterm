@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="budget-buddy.css" />
+		<title>Budget Buddy Midterm</title>
+	</head>
+	<body>
+		<h2>Expense Tracker</h2>
+		<div class="main-container">
+			<!-- input form -->
+			<div class="inner-container">
+				<h3>Add New Transaction</h3>
+				<form id="form">
+					<div class="form-control">
+						<div class="inc-exp-btns">
+							<input type="radio" name="inc-exp" id="inc" />
+							<label for="inc">Income</label>
+							<input type="radio" name="inc-exp" id="entertainment" />
+							<label for="exp">Entertainment</label>
+							<input type="radio" name="inc-exp" id="food" />
+							<label for="exp">Food</label>
+							<input type="radio" name="inc-exp" id="Clothing" />
+							<label for="exp">Clothing</label>
+							<input type="radio" name="inc-exp" id="bills" />
+							<label for="exp">Bills</label>
+						</div>
+					</div>
+					<div class="form-control">
+						<label for="text">Description</label>
+						<input type="text" id="text" placeholder="Enter Description " />
+					</div>
+
+					<div class="form-control">
+						<label for="amount">Amount</label>
+						<p>(negative - expense, positive - income)</p>
+						<input type="number" id="amount" placeholder="Enter amount..." />
+					</div>
+					<button class="btn">Add Transaction</button>
+				</form>
+			</div>
+
+			<!-- Running Totals and History -->
+			<div class="inner-container">
+				<div class="inc-exp-container">
+					<div class="amounts">
+						<h4>Balance</h4>
+						<p id="balance" class="money">+$0.00</p>
+					</div>
+					<div class="amounts">
+						<h4>Income</h4>
+						<p id="money-plus" class="money plus">+$0.00</p>
+					</div>
+					<div class="amounts">
+						<h4>Expense</h4>
+						<p id="money-minus" class="money minus">-$0.00</p>
+					</div>
+				</div>
+				<div id="history-container">
+					<h3>History - Total</h3>
+					<ul class="list">
+						<li class="plus">item1 category price</li>
+						<li class="minus">item2 category price</li>
+						<li class="minus">item1 category price</li>
+						<li class="minus">item2 category price</li>
+						<li class="plus">item1 category price</li>
+						<li class="minus">item2 category price</li>
+
+						<!-- <li class="plus">Cash <span>-$400</span><button class="delete-btn">x</button></li> -->
+					</ul>
+				</div>
+			</div>
+			<!-- categories -->
+			<div class="inner-container">
+				<div class="categories">
+					<h4>Entertainment - Total</h4>
+					<ul class="cat-list">
+						<li>Movies - $ Money Spent</li>
+						<li>Movies - $ Money Spent</li>
+						<li>Movies - $ Money Spent</li>
+					</ul>
+				</div>
+				<div class="categories">
+					<h4>Food - Total</h4>
+					<ul class="cat-list">
+						<li>Dinner - $ Money Spent</li>
+						<li>Dinner - $ Money Spent</li>
+						<li>Dinner - $ Money Spent</li>
+					</ul>
+				</div>
+				<div class="categories">
+					<h4>Clothing - Total</h4>
+					<ul class="cat-list">
+						<li>Shirts - $ Money Spent</li>
+						<li>Shirts - $ Money Spent</li>
+						<li>Shirts - $ Money Spent</li>
+					</ul>
+				</div>
+				<div class="categories">
+					<h4>Bills - Total</h4>
+					<ul class="cat-list">
+						<li>Cell Phone - $ Money Spent</li>
+						<li>Cell Phone - $ Money Spent</li>
+						<li>Cell Phone - $ Money Spent</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<footer>
+			<p>created, designed & coded by LIFO The Party</p>
+			<p>Cecelia Shelly . Chelsea Wylie . Ivona Gojcaj . Ankur Vasavada</p>
+		</footer>
+
+		<script src="budget-buddy.js"></script>
+	</body>
+</html>
