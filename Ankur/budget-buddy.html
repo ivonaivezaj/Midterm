@@ -12,32 +12,32 @@
 			<!-- input form -->
 			<div class="inner-container">
 				<h3>Add New Transaction</h3>
-				<form id="form">
+				<form id="transaction-form">
 					<div class="form-control">
 						<div class="inc-exp-btns">
-							<input type="radio" name="inc-exp" id="inc" />
+							<input type="radio" name="inc-exp" id="inc" value="income" required />
 							<label for="inc">Income</label>
-							<input type="radio" name="inc-exp" id="entertainment" />
-							<label for="exp">Entertainment</label>
-							<input type="radio" name="inc-exp" id="food" />
-							<label for="exp">Food</label>
-							<input type="radio" name="inc-exp" id="Clothing" />
-							<label for="exp">Clothing</label>
-							<input type="radio" name="inc-exp" id="bills" />
-							<label for="exp">Bills</label>
+							<input type="radio" name="inc-exp" id="entertainment" required value="entertainment" />
+							<label for="entertainment">Entertainment</label>
+							<input type="radio" name="inc-exp" id="food" value="food" required />
+							<label for="food">Food</label>
+							<input type="radio" name="inc-exp" id="clothing" value="clothing" required />
+							<label for="clothing">Clothing</label>
+							<input type="radio" name="inc-exp" id="bills" value="bills" required />
+							<label for="bills">Bills</label>
 						</div>
 					</div>
 					<div class="form-control">
-						<label for="text">Description</label>
-						<input type="text" id="text" placeholder="Enter Description " />
+						<label for="description"><h3>Description</h3> </label>
+						<input type="text" id="description-input" placeholder="Enter Description" />
 					</div>
 
 					<div class="form-control">
-						<label for="amount">Amount</label>
+						<label for="amount-value"><h3>Amount</h3></label>
 						<p>(negative - expense, positive - income)</p>
-						<input type="number" id="amount" placeholder="Enter amount..." />
+						<input type="number" id="amount-input" placeholder="Enter an amount" />
 					</div>
-					<button class="btn">Add Transaction</button>
+					<button type="submit" id="btn">Add Transaction</button>
 				</form>
 			</div>
 
@@ -50,22 +50,24 @@
 					</div>
 					<div class="amounts">
 						<h4>Income</h4>
-						<p id="money-plus" class="money plus">+$0.00</p>
+						<p id="income" class="money plus">+$0.00</p>
 					</div>
 					<div class="amounts">
 						<h4>Expense</h4>
-						<p id="money-minus" class="money minus">-$0.00</p>
+						<p id="expenses" class="money minus">-$0.00</p>
 					</div>
 				</div>
 				<div id="history-container">
 					<h3>History - Total</h3>
-					<ul class="list">
+					<ul id="history-list">
+						<!-- <li class="plus">Cash <span>-$400</span><button class="delete-btn">x</button></li>
+						<li class="minus">Cash <span>-$400</span><button class="delete-btn">x</button></li>
 						<li class="plus">item1 category price</li>
 						<li class="minus">item2 category price</li>
 						<li class="minus">item3 category price</li>
 						<li class="minus">item4 category price</li>
 						<li class="plus">item5 category price</li>
-						<li class="minus">item6 category price</li>
+						<li class="minus">item6 category price</li> -->
 
 						<!-- <li class="plus">Cash <span>-$400</span><button class="delete-btn">x</button></li> -->
 					</ul>
@@ -74,35 +76,43 @@
 			<!-- categories -->
 			<div class="inner-container">
 				<div class="categories">
-					<h4>Entertainment - Total</h4>
-					<ul class="cat-list">
+					<h4>Income - <span id="inc-total">$000</span></h4>
+					<ul class="cat-list" id="inc-list">
+						<!-- <li>Movies - $ Money Spent</li>
 						<li>Movies - $ Money Spent</li>
-						<li>Movies - $ Money Spent</li>
-						<li>Movies - $ Money Spent</li>
+						<li>Movies - $ Money Spent</li> -->
 					</ul>
 				</div>
 				<div class="categories">
-					<h4>Food - Total</h4>
-					<ul class="cat-list">
-						<li>Dinner - $ Money Spent</li>
-						<li>Dinner - $ Money Spent</li>
-						<li>Dinner - $ Money Spent</li>
+					<h4>Entertainment - <span id="ent-total">$000</span></h4>
+					<ul class="cat-list" id="ent-list">
+						<!-- <li>Movies - $ Money Spent</li>
+						<li>Movies - $ Money Spent</li>
+						<li>Movies - $ Money Spent</li> -->
 					</ul>
 				</div>
 				<div class="categories">
-					<h4>Clothing - Total</h4>
-					<ul class="cat-list">
-						<li>Shirts - $ Money Spent</li>
-						<li>Shirts - $ Money Spent</li>
-						<li>Shirts - $ Money Spent</li>
+					<h4>Food - <span id="food-total">$000</span></h4>
+					<ul class="cat-list" id="food-list">
+						<!-- <li>Dinner - $ Money Spent</li>
+						<li>Dinner - $ Money Spent</li>
+						<li>Dinner - $ Money Spent</li> -->
 					</ul>
 				</div>
 				<div class="categories">
-					<h4>Bills - Total</h4>
-					<ul class="cat-list">
+					<h4>Clothing - <span id="clothing-total">$000</span></h4>
+					<ul class="cat-list" id="clothing-list">
+						<!-- <li>Shirts - $ Money Spent</li>
+						<li>Shirts - $ Money Spent</li>
+						<li>Shirts - $ Money Spent</li> -->
+					</ul>
+				</div>
+				<div class="categories">
+					<h4>Bills - <span id="bills-total">$000</span></h4>
+					<ul class="cat-list" id="bills-list">
+						<!-- <li>Cell Phone - $ Money Spent</li>
 						<li>Cell Phone - $ Money Spent</li>
-						<li>Cell Phone - $ Money Spent</li>
-						<li>Cell Phone - $ Money Spent</li>
+						<li>Cell Phone - $ Money Spent</li> -->
 					</ul>
 				</div>
 			</div>
