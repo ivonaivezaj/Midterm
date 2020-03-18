@@ -130,6 +130,14 @@ input[type='number'] {
 	align-items: center;
 }
 
+.amounts h4 {
+	font-size: 1.5em;
+}
+
+.amounts p {
+	font-size: 1.25em;
+}
+
 #balance {
 	grid-area: balance-amount;
 	border: 2px solid #020308;
