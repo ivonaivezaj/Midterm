@@ -59,10 +59,46 @@ function addTransactionDOM(transaction) {
 	historyList.appendChild(item);
 }
 
+// add transactions to categories
+function categorize(transaction) {
+	// create li
+	const item = document.createElement('li');
+
+	// add innerHTML
+	item.innerHTML = `${transaction.desc} 
+    <span>-$${Math.abs(transaction.amount)}
+	</span> `;
+
+	let categories = transaction.category;
+
+	switch (categories) {
+		case 'entertainment':
+			entList.appendChild(item);
+			break;
+		case 'food':
+			foodList.appendChild(item);
+			break;
+		case 'clothing':
+			clothingList.appendChild(item);
+			break;
+		case 'bills':
+			billsList.appendChild(item);
+			break;
+		case 'income':
+			incList.appendChild(item);
+			break;
+		default:
+			break;
+	}
+}
+
 function initialize() {
 	historyList.innerHTML = '';
 
 	transactions.forEach(addTransactionDOM);
+	transactions.forEach(categorize);
 }
 
 initialize();
+
+transactionForm.addEventListener('submit', addTransactionDOM);
